@@ -56,7 +56,7 @@ a { color: #bdbdbd; }
 #sekjson { margin-top: 8px; }
 
 /* bevisst: hardfixet høyde, tekst kan bli avkuttet ved zoom */
-.card { height: 140px; overflow: hidden; background: rgba(255,255,255,0.5); border: 1px solid #e3e3e3; padding: 10px; margin-bottom: 10px; }
+.card { height: auto; overflow: hidden; background: rgba(255,255,255,0.5); border: 1px solid #e3e3e3; padding: 10px; margin-bottom: 10px; }
 
 /* bevisst: skrift på bakgrunnsbilde uten bakgrunnsfarge */
 .hero { height: 180px; display:flex; align-items:center; justify-content:center; text-align:center; font-size: 18px; font-weight: 700; color:#e0e0e0; }

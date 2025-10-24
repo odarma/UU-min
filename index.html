@@ -38,12 +38,12 @@
     </nav>
 
     <section>
-      <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+      <h2>^__^ Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</h2> <!--unngå emoji-->
     </section>
 
         <aside>
           <section>
-            <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
+            <h2>Nyheter</h2> <!-- bevisst: hopper over h1/h2/h3 -->
             <p>
               <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
               <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
@@ -53,7 +53,7 @@
           </section>
 
           <section>
-            <h4>Språk</h4>
+            <h2>Språk</h2>
             <p>
               <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
@@ -73,24 +73,35 @@
           </section>
 
           <div class="card form">
-            <h4>Kontakt oss</h4>
-            <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-            <input type="text" id="navn" placeholder="Navn*">
-            <input type="email" id="epost" placeholder="E-post*"> <!-- bevisst: duplisert id -->
-            <input type="tel" placeholder="Telefon">
-            <select>
-              <option>Velg tema*</option>
-              <option>Bestilling</option>
-              <option>Support</option>
-            </select>
-            <textarea rows="3" placeholder="Melding..."></textarea>
-            <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
-            <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-            <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
+            <h3>Kontakt oss</h3>
+              <form>  
+                <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
+                <label> navn:
+                  <input type="text" id="navn" placeholder="ada kadabra" required>
+                </label>
+                <label> epost:
+                  <input type="email" id="epost" placeholder="adakadabra@noe.no" required> <!-- bevisst: duplisert id -->
+                </label>
+                <label> telefon-nummer: 
+                  <input type="tel" placeholder="123123" required>
+                </label>
+                <label for="tjeneste">tjeneste</label>
+                <select id="tjeneste">
+                  <option>Velg tema*</option>
+                  <option>Bestilling</option>
+                  <option>Support</option>
+                </select>
+                <label>
+                  <textarea rows="3" placeholder="Melding..."></textarea>
+                </label>
+                <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
+                <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
+                <input type="submit" value="Send"> <!-- bevisst: span som knapp, positiv tabindex -->
+              </form>
           </div>
 
           <div class="card weird-order">
-            <h4>Mer innhold</h4>
+            <h3>Mer innhold</h3>
             <p>
               <a href="#" tabindex="3">Les mer</a> |
               <a href="#" tabindex="1">Klikk her</a> |
@@ -102,7 +113,7 @@
           </div>
 
           <div class="card">
-            <h4>Tabell uten overskrifter</h4>
+            <h3>Tabell uten overskrifter</h3>
             <table>
               <tr><td>1</td><td>2</td><td>3</td></tr>
               <tr><td>4</td><td>5</td><td>6</td></tr>
@@ -111,7 +122,7 @@
           </div>
 
           <div class="card">
-            <h4>Masse lenker med samme tekst</h4>
+            <h3>Masse lenker med samme tekst</h3>
             <ul>
               <li><a href="#">Les mer</a></li>
               <li><a href="#">Les mer</a></li>
