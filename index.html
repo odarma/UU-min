@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <!-- bevisst: blokkerer zoom (dårlig for UU) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stil.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>forside for verdens beste nettside</title> <!-- bevisst: vag tittel -->
   </head>
   <body>
@@ -38,103 +38,108 @@
     </nav>
 
     <section>
-      <h2>^__^ Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</h2> <!--unngå emoji-->
+      <h2><a href="#">^__^  les mer her for viktig informasjon angående noe ✨</a></h2> <!--unngå emoji-->
     </section>
 
-        <aside>
-          <section>
-            <h2>Nyheter</h2> <!-- bevisst: hopper over h1/h2/h3 -->
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
-              <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
-            </p>
-            <p class="status-ok">Tilgjengelig</p>
-            <p class="status-bad">Utilgjengelig</p>
-          </section>
-
-          <section>
-            <h2>Språk</h2>
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
-            </p>
-          </section>
-        </aside>
-
-      <main>
-          <h1>
-            VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
-          </h1>
-
+    <aside>
+      <section>
+        <h2>Nyheter</h2>
+        <article>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt="tom bilde">
+          <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
+        </article>
+        <p class="status-ok">Tilgjengelig</p>
+        <p class="status-bad">Utilgjengelig</p>
+      </section>
+      <section>
+        <h3>Språk</h3>
+        <ul>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="norsk"></li>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="engelsk"></li>
+        </ul>
+      </section>
+    </aside>
+    <main>
+        <h1>
+          VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
+        </h1>
+      <section>
         <section>
-
-          <section>
-            <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
-          </section>
-
-          <div class="card form">
-            <h3>Kontakt oss</h3>
-              <form>  
-                <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-                <label> navn:
-                  <input type="text" id="navn" placeholder="ada kadabra" required>
-                </label>
-                <label> epost:
-                  <input type="email" id="epost" placeholder="adakadabra@noe.no" required> <!-- bevisst: duplisert id -->
-                </label>
-                <label> telefon-nummer: 
-                  <input type="tel" placeholder="123123" required>
-                </label>
-                <label for="tjeneste">tjeneste</label>
-                <select id="tjeneste">
-                  <option>Velg tema*</option>
-                  <option>Bestilling</option>
-                  <option>Support</option>
-                </select>
-                <label>
-                  <textarea rows="3" placeholder="Melding..."></textarea>
-                </label>
-                <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
-                <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-                <input type="submit" value="Send"> <!-- bevisst: span som knapp, positiv tabindex -->
-              </form>
-          </div>
-
-          <div class="card weird-order">
-            <h3>Mer innhold</h3>
-            <p>
-              <a href="#" tabindex="3">Les mer</a> |
-              <a href="#" tabindex="1">Klikk her</a> |
-              <a href="#" tabindex="2">Trykk her</a>
-            </p>
-            <p>
-              <span class="btn" tabindex="4">Primær handling</span>
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Tabell uten overskrifter</h3>
-            <table>
-              <tr><td>1</td><td>2</td><td>3</td></tr>
-              <tr><td>4</td><td>5</td><td>6</td></tr>
-              <tr><td>7</td><td>8</td><td>9</td></tr>
-            </table>
-          </div>
-
-          <div class="card">
-            <h3>Masse lenker med samme tekst</h3>
-            <ul>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-            </ul>
-          </div>
+          <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
         </section>
-      </main>
-
+        <article class="card form">
+          <h3>Kontakt oss</h3>
+            <form>  
+                <input type="text" id="navn" placeholder="ada kadabra" required>
+              </label>
+              <label> epost:
+                <input type="email" id="epost" placeholder="adakadabra@noe.no" required>
+              </label>
+              <label> telefon-nummer: 
+                <input type="tel" placeholder="123123" required>
+              </label>
+              <label for="tjeneste">tjeneste</label>
+              <select id="tjeneste">
+                <option>Velg tema*</option>
+                <option>Bestilling</option>
+                <option>Support</option>
+              </select>
+              <label>
+                <textarea rows="3" placeholder="Melding..."></textarea>
+              </label>
+              <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
+              <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
+              <input type="submit" value="Send"> 
+            </form>
+          </article>
+        <article class="card weird-order">
+          <h3>Mer innhold</h3>
+          <ol>
+            <li><a href="#">Les om eksamensoppgave 1 her</a></li> 
+            <li><a href="#">Les om eksamensoppgave 2 her</a></li> 
+            <li><a href="#">Les om eksamensoppgave 3 her</a></li> 
+          </ol>
+          <button>start eksamen</button>
+        </article>
+        <article class="card">
+          <h3>Tabell</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>kolonne 1</th>
+                <th>kolonne 2</th>
+                <th>kolonne 3</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+              </tr>
+            </tbody>  
+          </table>
+        </article>
+        <article class="card">
+          <h3>Masse lenker med samme tekst</h3>
+          <ul>
+            <li><a href="#">oppgave om UU</a></li>
+            <li><a href="#">oppgave om SEO</a></li>
+            <li><a href="#">oppgave om semantisk HTML</a></li>
+            <li><a href="#">oppgave om css grid og fleqs</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
     <footer>
-      <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="facebook ikon for lenke til facebook">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="twitter ikon for lenke til twitter">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="instagram ikon for lenke til instagram">
